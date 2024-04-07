@@ -1,0 +1,68 @@
+.box {
+	padding: 20px 10px;
+	background-color: black;
+	///////////////// background-color: red;
+	// position: absolute;
+	// position: sticky;
+	bottom: 0;
+	width: 100%;
+
+	@media (max-width: 1000px) {
+		// padding: 70px 30px;
+	}
+
+	h1 {
+		///////////////// color: green;
+		color: white;
+		text-align: center;
+		margin-top: 10px;
+	}
+
+	.footerContainer {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		max-width: 1000px;
+		margin: 0 auto;
+		///////////////// background-color: yellow !important;
+		padding: 20px;
+
+		.footerRow {
+			///////////////// background-color: orange;
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(285px, 1fr)); // A MODIFIER !!!
+			grid-gap: 20px;
+
+			@media (max-width: 1000px) {
+				grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+			}
+
+			.footerColumn {
+				///////////////// background-color: blue;
+				display: flex;
+				flex-direction: column;
+				text-align: left;
+
+				.footerColumnHeading {
+					font-size: 24px;
+					color: #fff;
+					margin-bottom: 40px;
+					font-weight: bold;
+				}
+				.footerLink {
+					color: #fff;
+					margin-bottom: 20px;
+					font-size: 18px;
+					text-decoration: none;
+
+					&:hover {
+						color: green;
+						transition: 200ms ease-in;
+					}
+				}
+			}
+		}
+
+		/* background: red; */
+	}
+}

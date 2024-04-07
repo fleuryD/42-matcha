@@ -1,0 +1,215 @@
+/**
+ **■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ **■                                                                           ■
+ **■                                                        :::      ::::::::  ■
+ **■                                                       :+:      :+:    :+: ■
+ **■                     | |       | |                  +:+ +:+         +:+    ■
+ **■    _ __ ___    __ _ | |_  ___ | |__    __ _      +#+  +:+       +#+       ■
+ **■   | '_ ` _ \  / _` || __|/ __|| '_ \  / _` |   +#+#+#+#+#+   +#+          ■
+ **■   | | | | | || (_| || |_| (__ | | | || (_| |        #+#    #+#            ■
+ **■   |_| |_| |_| \__,_| \__|\___||_| |_| \__,_|       ###   ########.fr      ■
+ **■                                                                           ■
+ **■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ *
+ *	@fileName		Xxxxxxxxxxxxxxxxxx
+ *
+ *
+ *	@description
+ *		Il faut mettre "ZForm" dans le className de tous les formulaires du site
+ *		Jai creer ZFormGroup: c'est une copie de ZFormInput un peu modifier pour pas faire de conflit avec tes modif
+ *
+ *		Tu peux ajouter des className aux ZFormGroup avec:
+ *				groupClassname=""
+ *				labelClassname=""
+ *				inputContainerClassName=""
+ *				inputClassname=""
+ *				frontErrorClassname=""
+ *
+ *
+ *	@usedIn
+ *		- `xxxxxxxxxx/xxxxxxxxxxxxxxxx``
+ *
+ *
+ *
+ *	@author		dfleury
+ *
+ *	@updatedby	lamine
+ *
+ *
+ *
+ **■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+
+/*
+ *
+ *
+ *		Style par default de tous les formulaires (a modifier)
+ *
+ *		Il faut mettre "ZForm" dans le className de tous les formulaires du site
+ *
+ *
+ */
+.ZForm {
+	background-color: white;
+	padding: 5px;
+	.ZFormHeader {
+		margin-bottom: 20px;
+	}
+
+	.ZFormGroup {
+		// border: 2px solid green;
+		// justify-content: center;
+		// text-align: center;
+
+		.ZLabel {
+			// border: 2px solid yellow;
+			// display: inline-block;
+		}
+
+		.ZInputContainer {
+			// border: 2px solid lightcoral;
+			// display: inline-block;
+			margin-bottom: 10px;
+			position: relative;
+		}
+		.ZInputContainer:focus {
+			outline: none;
+		}
+
+		.ZInput {
+			//background-color: lightblue;
+			//width: 150px;
+			height: 30px;
+			border: none;
+			border-bottom: 1px solid #333;
+			width: 100%;
+			background: none;
+			font-weight: 600;
+			border-radius: 0px;
+		}
+		.ZInput:focus {
+			outline: none;
+		}
+
+		.ZFrontError {
+			//border: 2px solid orange;
+			color: orangered;
+		}
+	}
+	.ZFormFooter {
+		margin-top: 20px;
+		text-align: center;
+		.ZButtonSubmit {
+			//border: 2px solid blue;
+		}
+	}
+}
+
+/*
+ *
+ *	Seulement pour la page login
+ *
+ *
+ */
+#PageLogin {
+	.ZForm {
+		padding-top: 40px;
+		.ZFormGroup {
+			.ZLabel {
+				color: purple;
+			}
+		}
+	}
+}
+
+/*
+ *
+ *	Seulement pour la page Register et EditProfil
+ *
+ *
+ */
+#PageRegister,
+#PageEditProfil {
+	.ZForm {
+		padding-top: 40px;
+		.ZFormGroup {
+			margin-bottom: 5px !important;
+
+			.ZLabel {
+				display: inline-block;
+				color: green;
+			}
+
+			.ZInputContainer {
+				margin-left: 5px;
+			}
+
+			&.groupSex {
+				.ZLabel,
+				.ZInputContainer {
+					display: block;
+				}
+				text-align: left;
+			}
+		}
+	}
+}
+
+/*
+ *
+ *	Seulement pour la page PagePasswordResetAsk
+ *
+ *
+ */
+#PagePasswordResetAsk {
+	.ZForm {
+		.ZFormGroup {
+			//margin-bottom: 5px !important;
+			//background-color: lightblue;
+			//border-right: 1px solid gray;
+			//text-align: right;
+
+			.ZLabel {
+				//display: inline-block;
+				color: green;
+			}
+
+			.ZInputContainer {
+				//margin-left: 5px;
+				//display: inline-block;
+			}
+		}
+	}
+}
+input:focus {
+	outline: none;
+}
+
+.info-button {
+	background-color: transparent; /* Fond transparent */
+	border: none; /* Pas de bordure */
+	cursor: pointer; /* Curseur de souris */
+}
+
+.info-button i {
+	color: #333; /* Couleur de l'icône (bleu par exemple) */
+	font-size: 24px; /* Taille de l'icône */
+}
+
+.info-button:hover i {
+	color: #d6d8db; /* Couleur de l'icône au survol */
+}
+
+.ZFormGroupCGU {
+	display: flex !important;
+}
+
+.modal {
+	position: fixed;
+	top: 10px;
+	right: 100px;
+	bottom: 0;
+	left: 0;
+	z-index: 10040;
+	overflow: auto;
+	overflow-y: auto;
+}

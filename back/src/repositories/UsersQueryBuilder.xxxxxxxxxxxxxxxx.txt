@@ -1,0 +1,97 @@
+
+SELECT
+
+	u.id,
+	u.username,
+	u.lastname,
+	u.firstname,
+	u.birthday,
+	u.biography,
+	u.gender,
+	u.love_m,
+	u.love_f,
+	u.love_nb,
+	u.last_connection_at,
+	u.is_online,
+	u.latitude,
+	u.longitude,
+	u.city,
+	u.picture_1,
+	COUNT(DISTINCT l.id) AS count_liked,
+	COUNT(DISTINCT b.id) AS count_blocked,
+	COUNT(DISTINCT v.id) AS count_visited,
+	COUNT(DISTINCT f.id) AS count_faked,
+	ARRAY_AGG(DISTINCT t.name) AS tags,
+	( COUNT(DISTINCT l.id) * 10 +  COUNT(DISTINCT b.id) * -5 +  COUNT(DISTINCT v.id) * 2 +  COUNT(DISTINCT f.id) * -20 ) AS fame ,
+	CASE WHEN blockedbyme.id IS NOT NULL THEN true ELSE false END AS is_blocked,
+	CASE WHEN blockesme.id	IS NOT NULL THEN true ELSE false END AS is_blockes_me,
+	CASE WHEN likedbyme.sender_id =  323 THEN true ELSE false END AS is_liked_by_me,
+	CASE WHEN likesme.target_id	=  323 THEN true ELSE false END AS is_likes_me,
+	( 6371 * acos(cos(radians(50.62920000)) * cos(radians(u.latitude)) * cos(radians(u.longitude) - radians(3.05730000)) + sin(radians(50.62920000)) * sin(radians(u.latitude))) ) AS distance,
+	(
+		SELECT COUNT(*)
+		FROM tags_users ut
+		JOIN tags t ON ut.tag_id = t.id
+		WHERE ut.user_id = u.id
+		AND t.id IN (
+					SELECT ut2.tag_id
+					FROM tags_users ut2
+					WHERE ut2.user_id = 323
+		)
+	)  AS common_tags_count
+
+FROM users u
+
+
+	LEFT JOIN (
+		SELECT tu.user_id, t.name FROM tags_users tu
+		JOIN tags t ON tu.tag_id = t.id
+	) t ON u.id = t.user_id
+	LEFT JOIN likes  l ON u.id = l.target_id
+	LEFT JOIN blocks b ON u.id = b.target_id
+	LEFT JOIN visits v ON u.id = v.target_id
+	LEFT JOIN fakes  f ON u.id = f.target_id
+	LEFT JOIN blocks blockedbyme ON u.id = blockedbyme.target_id AND blockedbyme.sender_id = 323
+	LEFT JOIN blocks blockesme	ON u.id = blockesme.sender_id	AND blockesme.target_id	= 323
+	LEFT JOIN likes  likedbyme	ON u.id = likedbyme.target_id	AND likedbyme.sender_id	= 323
+	LEFT JOIN likes  likesme	ON u.id = likesme.sender_id	AND likesme.target_id	  = 323
+
+WHERE
+
+	blockedbyme.id IS NULL AND
+	blockesme.id IS NULL AND
+	u.id <>  323 AND
+	u.gender <> 'NB' AND
+	u.love_m = true AND
+	AGE(u.birthday) >= INTERVAL '18 years' AND
+	(
+		SELECT COUNT(*)
+		FROM tags_users ut
+		JOIN tags t ON ut.tag_id = t.id
+		WHERE ut.user_id = u.id
+		AND t.id IN (
+					SELECT ut2.tag_id
+					FROM tags_users ut2
+					WHERE ut2.user_id = 323
+		)
+	) >= 1
+
+GROUP BY
+
+	u.id,
+	u.username,
+	blockedbyme.id,
+	blockesme.id,
+	likedbyme.sender_id,
+	likesme.target_id
+HAVING
+
+	( COUNT(DISTINCT l.id) * 10 +  COUNT(DISTINCT b.id) * -5 +  COUNT(DISTINCT v.id) * 2 +  COUNT(DISTINCT f.id) * -20 ) <= 52  AND
+	(( 6371 * acos(cos(radians(50.62920000)) * cos(radians(u.latitude)) * cos(radians(u.longitude) - radians(3.05730000)) + sin(radians(50.62920000)) * sin(radians(u.latitude))) )  <= 500)
+
+ORDER BY username
+
+LIMIT 12  OFFSET 0
+
+
+;

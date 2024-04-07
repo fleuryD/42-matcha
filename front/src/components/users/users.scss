@@ -1,0 +1,9 @@
+.user-location {
+	a {
+		color: black;
+		text-decoration: underline;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}

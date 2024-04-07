@@ -1,0 +1,9 @@
+# compiled output
+/dist
+/node_modules
+.env
+
+
+# tous les fichiers du dossier, sauf : _this_directory_is_git_ignored_
+/src/assets/users_img/uploaded/*
+!/src/assets/users_img/uploaded/_this_directory_is_git_ignored_

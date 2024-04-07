@@ -1,0 +1,39 @@
+{
+	"name": "backapp",
+	"version": "0.0.0",
+	"private": true,
+	"scripts": {
+		"start": "node ./src/app.js",
+		"start-debug": "nodemon ./src/app.js -w .env",
+		"start-debug-xxxxxxxx": "node --inspect=0.0.0.0 app.js",
+		"build": "webpack"
+	},
+	"dependencies": {
+		"bcryptjs": "^2.4.3",
+		"bufferutil": "^4.0.8",
+		"cookie-parser": "~1.4.4",
+		"cors": "^2.8.5",
+		"debug": "~2.6.9",
+		"dotenv": "^16.3.1",
+		"express": "~4.16.1",
+		"http-errors": "~1.6.3",
+		"jade": "^1.11.0",
+		"jsonwebtoken": "^9.0.2",
+		"morgan": "~1.9.1",
+		"multer": "^1.4.5-lts.1",
+		"node-gyp": "^10.0.1",
+		"node-pre-gyp": "^0.17.0",
+		"nodemailer": "^6.9.5",
+		"pg": "^8.11.3",
+		"sharp": "^0.33.1",
+		"socket.io": "^4.7.2",
+		"utf-8-validate": "^5.0.10"
+	},
+	"devDependencies": {
+		"eslint": "^8.55.0",
+		"eslint-config-prettier": "^9.1.0",
+		"prettier": "^3.1.1",
+		"webpack": "^5.90.3",
+		"webpack-cli": "^5.1.4"
+	}
+}

@@ -1,0 +1,28 @@
+#usersExplorerFilters {
+	//position: sticky;
+	//top: 70px;
+	font-size: 0.8em;
+	padding: 5px;
+
+	.formGroup {
+		//border: 2px solid red;
+		display: inline-block;
+		margin-right: 40px;
+		white-space: nowrap;
+
+		.form-label {
+			//color: blue;
+			display: inline-block;
+			padding-right: 5px;
+		}
+		input {
+			//color: green;
+			display: inline-block;
+			font-size: 0.8em;
+		}
+		input[type="number"] {
+			//color: green;
+			width: 75px;
+		}
+	}
+}

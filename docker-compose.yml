@@ -1,0 +1,59 @@
+version: "3"
+services:
+  matcha-postgres:
+    build: pgsql
+    container_name: matcha-postgres
+    env_file:
+      - ./back/.env
+    #environment:
+    #    - POSTGRES_HOST_AUTH_METHOD=trust
+    #    - POSTGRES_USER=${ENV_POSTGRES_USER}
+    restart: always
+    networks:
+      - matcha-network
+    ports:
+      - 5439:5439
+  matcha-frontend:
+    build: front
+    container_name: matcha-front
+    restart: always
+    ports:
+      - 3009:3009
+    networks:
+      - matcha-network
+    depends_on:
+      - matcha-backend
+    volumes:
+      - ./front:/app
+      - /app/node_modules
+
+    environment:
+      - TEST="TestTestTest6666"
+      - API_BASE_URL="http://localhost:3008"
+    ### env_file:
+    ###  - ./front/.env
+  matcha-backend:
+    build: back
+    container_name: matcha-backend
+    env_file:
+      - ./back/.env
+    # environment:
+    #     - JWT_SECRET=${ENV_JWT_SECRET}
+    ports:
+      - 3008:3008
+    restart: always
+    networks:
+      - matcha-network
+    depends_on:
+      - matcha-postgres
+    links:
+      - matcha-postgres
+    volumes:
+      - ./back:/app
+      - /app/node_modules
+networks:
+  matcha-network:
+    driver: bridge
+# done :
+#export DOCKER_BUILDKIT=0
+#export COMPOSE_DOCKER_CLI_BUILD=0

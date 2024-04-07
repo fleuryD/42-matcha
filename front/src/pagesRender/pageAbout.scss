@@ -1,0 +1,52 @@
+/**
+ **■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ **■                                                                           ■
+ **■                                                        :::      ::::::::  ■
+ **■                                                       :+:      :+:    :+: ■
+ **■                     | |       | |                  +:+ +:+         +:+    ■
+ **■    _ __ ___    __ _ | |_  ___ | |__    __ _      +#+  +:+       +#+       ■
+ **■   | '_ ` _ \  / _` || __|/ __|| '_ \  / _` |   +#+#+#+#+#+   +#+          ■
+ **■   | | | | | || (_| || |_| (__ | | | || (_| |        #+#    #+#            ■
+ **■   |_| |_| |_| \__,_| \__|\___||_| |_| \__,_|       ###   ########.fr      ■
+ **■                                                                           ■
+ **■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+ *
+ *	@fileName		Xxxxxxxxxxxxxxxxxx
+ *
+ *
+ *	@description
+ *		xxxxxxxxxxxxxxxxxxxxxxxx
+ *		xxxxxxxxxxxxxxxxxxxxxxxx
+ *		xxxxxxxxxxxxxxxxxxxxxxxx
+ *		xxxxxxxxxxxxxxxxxxxxxxxx
+ *		xxxxxxxxxxxxxxxxxxxxxxxx
+ *
+ *
+ *	@usedIn
+ *		- `xxxxxxxxxx/xxxxxxxxxxxxxxxx`
+ *
+ *
+ *
+ *	@author		dfleury
+ *
+ *	@updatedby	lamine
+ *
+ *
+ *
+ **■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■*/
+
+#PageAbout {
+	#section-sujet {
+		.todoSubject {
+			border: none !important;
+			background-color: white;
+			//background-color: rgb(250, 230, 230);
+			//border: 1px solid red;
+			h2,
+			h3,
+			h4 {
+				color: black !important;
+			}
+		}
+	}
+}

@@ -1,0 +1,7 @@
+Lamine:
+
+NE TOUCHE PAS AUX FICHIERS DU DOSSIER `pages`
+
+
+les pages ou j'ai bien separe la logic/le rendu sont dans `pageRender`
+
