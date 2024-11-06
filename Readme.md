@@ -2,25 +2,6 @@
 
 `Because, love too can be industrialized.`
 
-## Utilisation
-
-- Clonez le projet.
-- Créez les fichiers `.env` dans les dossiers `/front` et `/back`
-
-  (copiez les fichiers `.env.exemple` et modifiez les variables necessaires)
-
-- Executez la commande `make` à la racine du projet.
-
-- Rendez-vous à l'adresse `http://localhost:3009`
-
-- Si vous essayez l'adresse du backend ( `http://localhost:3008` ) dans le navigateur, vous aurez le message `forbidden`
-
-### Fixtures
-
-- Les tables de la BDD et des fixtures sont crées avec le fichier `/pgsql/CreateDB.sql`
-
-- Sur le front, rendez-vous dans `Admin` (saisissez le superPassword du fichier `/back/.env`) et cliquez sur les boutons `create fixtures`
-
 
 ## Description
 
@@ -42,6 +23,25 @@ Ce project de la branche Web de l'École 42 est une application de rencontres qu
 - **Base de données**: MySQL, MongoDB (ou toute autre base de données de votre choix)
 - **Authentification**: JWT (JSON Web Tokens)
 - **Géolocalisation**: API de géolocalisation (intégration facultative)
+
+## Utilisation
+
+- Clonez le projet.
+- Créez les fichiers `.env` dans les dossiers `/front` et `/back`
+
+  (copiez les fichiers `.env.exemple` et modifiez les variables necessaires)
+
+- Executez la commande `make` à la racine du projet.
+
+- Rendez-vous à l'adresse `http://localhost:3009`
+
+- Si vous essayez l'adresse du backend ( `http://localhost:3008` ) dans le navigateur, vous aurez le message `forbidden`
+
+### Fixtures
+
+- Les tables de la BDD et des fixtures sont crées avec le fichier `/pgsql/CreateDB.sql`
+
+- Sur le front, rendez-vous dans `Admin` (saisissez le superPassword du fichier `/back/.env`) et cliquez sur les boutons `create fixtures`
 
 ---
 
