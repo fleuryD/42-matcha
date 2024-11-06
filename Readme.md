@@ -21,9 +21,6 @@
 
 - Sur le front, rendez-vous dans `Admin` (saisissez le superPassword du fichier `/back/.env`) et cliquez sur les boutons `create fixtures`
 
-## Fonctionnalités
-
-- **Authentification sécurisée**: Utilisation du token JWT pour sécuriser l'accès à l'application.
 
 ## Description
 
