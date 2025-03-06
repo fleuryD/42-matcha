@@ -2,10 +2,11 @@
 
 `Because, love too can be industrialized.`
 
-
 ## Description
 
 Ce project de la branche Web de l'École 42 est une application de rencontres qui vous permet de rechercher, de liker et de discuter avec d'autres utilisateurs.
+
+![Screenshot](./assets/matcha-screen-1.png)
 
 ## Fonctionnalités
 
@@ -16,6 +17,8 @@ Ce project de la branche Web de l'École 42 est une application de rencontres qu
 - **Chat en temps réel**: Communiquez avec vos matchs grâce à un système de chat en temps réel intégré.
 - **Géolocalisation**: Affichez la distance entre les utilisateurs pour faciliter les rencontres en personne.
 
+![Screenshot](./assets/matcha-screen-2.png)
+
 ## Technologies Utilisées
 
 - **Frontend**: React.js, Bootstrap
@@ -23,6 +26,8 @@ Ce project de la branche Web de l'École 42 est une application de rencontres qu
 - **Base de données**: MySQL, MongoDB (ou toute autre base de données de votre choix)
 - **Authentification**: JWT (JSON Web Tokens)
 - **Géolocalisation**: API de géolocalisation (intégration facultative)
+
+![Screenshot](./assets/matcha-screen-3.png)
 
 ## Utilisation
 
