@@ -2,6 +2,11 @@
 
 `Because, love too can be industrialized.`
 
+<a href="https://reactjs.org/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" title="React" alt="react" width="50" height="50"/></a>&nbsp;&nbsp;&nbsp;
+<a href="https://getbootstrap.com" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg" title="bootstrap" alt="bootstrap" width="50" height="50"/></a>&nbsp;&nbsp;&nbsp;
+<a href="https://expressjs.com" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg" alt="express" width="50" height="50"/></a>&nbsp;&nbsp;&nbsp;
+<a href="https://www.postgresql.org" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg" alt="postgresql" width="50" height="50"/></a>&nbsp;&nbsp;&nbsp;
+
 ## Description
 
 Ce project de la branche Web de l'École 42 est une application de rencontres qui vous permet de rechercher, de liker et de discuter avec d'autres utilisateurs.
@@ -23,7 +28,7 @@ Ce project de la branche Web de l'École 42 est une application de rencontres qu
 
 - **Frontend**: React.js, Bootstrap
 - **Backend**: Express.js
-- **Base de données**: MySQL, MongoDB (ou toute autre base de données de votre choix)
+- **Base de données**: PostgreSQL
 - **Authentification**: JWT (JSON Web Tokens)
 - **Géolocalisation**: API de géolocalisation (intégration facultative)
 
